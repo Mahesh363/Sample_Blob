@@ -1,9 +1,8 @@
 pipeline {
-    agent {
-         dockerfile true
-    }
+    agent any
     tools {
         maven "maven"
+        docker "docker"
     }
 
     stages {
