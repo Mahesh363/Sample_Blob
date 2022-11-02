@@ -18,10 +18,10 @@ pipeline {
             steps {
 
                 // Run Maven on a Unix agent.
-                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
+               //  sh "mvn -Dmaven.test.failure.ignore=true clean package"
 
                 // To run Maven on a Windows agent, use
-//                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                   bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
 
 //             post {
@@ -42,7 +42,7 @@ pipeline {
         
         stage('docker package') {
             steps {
-                sh 'docker build -t dockerjava .'
+                bat 'docker build -t dockerjava .'
             }
         }
         
@@ -60,7 +60,7 @@ pipeline {
         
         stage('docker deploy') {
             steps {
-                sh 'docker run -p 9090:8080 dockerjava'
+                bat 'docker run -p 9090:8080 dockerjava'
             }
         }
                 
