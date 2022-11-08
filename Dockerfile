@@ -1,4 +1,5 @@
 FROM openjdk:8-jdk-alpine as build
+MAINTAINER Mahesh363
 WORKDIR /workspace/app
 
 COPY mvnw .
