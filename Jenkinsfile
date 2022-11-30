@@ -65,7 +65,7 @@ pipeline {
 //        }
               stage('deploy to k8s') {
             steps {
-                bat 'kubectl create -f nginx-deployment-service.yml'
+                bat 'kubectl apply -f nginx-deployment-service.yml'
             }
         }
 		
