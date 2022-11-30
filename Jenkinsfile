@@ -71,7 +71,7 @@ pipeline {
 		
 	       stage('run app') {
             steps {
-                bat 'minikube service msa'
+                bat 'minikube service nginx'
             }
         }
                 
