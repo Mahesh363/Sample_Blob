@@ -58,11 +58,11 @@ pipeline {
 //             }
 //         }
         
-        stage('docker deploy') {
-            steps {
-                bat 'docker run -p 9090:8080 dockerjava'
-            }
-        }
+//        stage('docker deploy') {
+//            steps {
+//                bat 'docker run -p 9090:8080 dockerjava'
+//            }
+//        }
               stage('deploy to k8s') {
             steps {
                 bat 'kubectl create -f nginx-deployment-service.yml'
