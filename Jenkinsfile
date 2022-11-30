@@ -9,7 +9,7 @@ pipeline {
         stage('Clone') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/gopiteekenam/docker-java-sample.git'
+                git 'https://github.com/Mahesh363/Sample_Blob.git'
             }
             
         }
